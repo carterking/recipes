@@ -1,0 +1,36 @@
+[{
+    "id": 1,
+    "carbs": 0,
+    "category": "Protein",
+    "link": "http://cbi.as/a1gpt",
+    "name": "Taco Meat",
+    "sugar": 0,
+    "protein": 22,
+    "description": "Grass-fed ground beef with cajun seasoning",
+    "thumbnail": "./assets/images/taco-meat.jpg"
+  },
+
+  {
+    "id": 2,
+    "carbs": 0,
+    "category": "Protein",
+    "link": "http://cbi.as/a1gxh",
+    "name": "Grilled Chicken Breast",
+    "sugar": 0,
+    "protein": 35,
+    "description": "Non-Tyson chicken with cajun seasoning",
+    "thumbnail": "./assets/images/chicken-breast.jpg"
+  },
+
+  {
+    "id": 3,
+    "carbs": 0,
+    "category": "Protein",
+    "link": "http://cbi.as/a1gpt",
+    "name": "Baked Pesto Chicken",
+    "sugar": 0,
+    "protein": 22,
+    "description": "Pre-made, ready to bake from Harps",
+    "thumbnail": "./assets/images/pesto-chicken.jpg"
+  }
+]

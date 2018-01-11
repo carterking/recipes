@@ -1,0 +1,15 @@
+<h1>Recipes</h1>
+
+<div class="row">
+  <div class="col" *ngFor="let item of recipeItems">
+
+    <div class="card">
+      <img class="card-img-top" src="{{item.thumbnail}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">{{item.description}}</p>
+        <button (click)="goToDetail(item.id)" class="btn btn-primary">View</button>
+      </div>
+    </div>
+  </div>
+</div>
