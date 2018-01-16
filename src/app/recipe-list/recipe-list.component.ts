@@ -14,24 +14,27 @@ export class RecipeListComponent implements OnInit {
 
   recipeItem: RecipeItem = {
     id: 1,
-    carbs: 0,
+    isLowCarb: true,
     category: 'Protein',
     link: 'http://cbi.as/a1gpt',
     name: 'Taco Meat',
-    sugar: 0,
-    protein: 22,
     description: 'Grass-fed ground beef with a bit of cajun seasoning',
     thumbnail: './assets/images/taco-meat.jpg',
   };
 
   recipeItems: RecipeItem[] = [];
+  allRecipeItems: RecipeItem[] = [];
 
-  constructor(private catService: CategoriesService, private recService: RecipeItemsService, private router: Router) { 
+  filterProp: String = 'name';
+  filterDirection: String = 'asc';
+  searchTerm: String = '';
+
+  constructor(private catService: CategoriesService, private recService: RecipeItemsService, private router: Router) {
 
   }
 
   goToDetail(id: number) {
-    const link = ['/detail, id'];
+    const link = ['/detail', id];
     this.router.navigate(link);
   }
 
@@ -43,11 +46,45 @@ export class RecipeListComponent implements OnInit {
     const x: Array<Category> = this.catService.getCategories();
 
     this.recService.getRecipeItems().then((r: Array<RecipeItem>) => {
-      this.recipeItems = r;
+      this.allRecipeItems = r;
+      this.recipeItems = this.allRecipeItems;
+      this.sort();
+    });
 
+  }
+  sort() {
+    const direction = (this.filterDirection === 'asc') ? 1 : -1;
+
+    this.recipeItems.sort((a, b) => {
+      if (a[this.filterProp] < b[this.filterProp]) {
+        return -1 * direction;
+      } else if (a[this.filterProp] > b[this.filterProp]) {
+        return 1 * direction;
+      } else {
+        return 0;
+      }
     });
 
 
+  }
+
+  searchMenu() {
+    const searchProps: String[] = ['name', 'description'];
+    const lowerTerm = this.searchTerm.toLowerCase();
+
+    this.recipeItems = this.allRecipeItems.filter(x => {
+      let found = false;
+
+      searchProps.forEach( y => {
+        const tempTerm = x[y].toLowerCase();
+        if (tempTerm.indexOf(lowerTerm) > -1) {
+          found = true;
+        }
+      });
+
+      return found;
+
+    });
   }
 
 }

@@ -3,9 +3,7 @@ export interface RecipeItem {
     name: string;
     description: string;
     category: string;
-    carbs: number;
-    sugar: number;
-    protein: number;
+    isLowCarb: boolean;
     link: string;
     thumbnail: string;
 }

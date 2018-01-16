@@ -1,36 +1,81 @@
 [{
     "id": 1,
-    "carbs": 0,
+    "isLowCarb": true,
     "category": "Protein",
     "link": "http://cbi.as/a1gpt",
     "name": "Taco Meat",
-    "sugar": 0,
-    "protein": 22,
     "description": "Grass-fed ground beef with cajun seasoning",
     "thumbnail": "./assets/images/taco-meat.jpg"
   },
 
   {
     "id": 2,
-    "carbs": 0,
+    "isLowCarb": true,
     "category": "Protein",
     "link": "http://cbi.as/a1gxh",
     "name": "Grilled Chicken Breast",
-    "sugar": 0,
-    "protein": 35,
     "description": "Non-Tyson chicken with cajun seasoning",
     "thumbnail": "./assets/images/chicken-breast.jpg"
   },
 
   {
     "id": 3,
-    "carbs": 0,
+    "isLowCarb": true,
     "category": "Protein",
     "link": "http://cbi.as/a1gpt",
     "name": "Baked Pesto Chicken",
-    "sugar": 0,
-    "protein": 22,
     "description": "Pre-made, ready to bake from Harps",
     "thumbnail": "./assets/images/pesto-chicken.jpg"
+  },
+
+  {
+    "id": 4,
+    "isLowCarb": true,
+    "category": "Protein",
+    "link": "http://cbi.as/a1gz1",
+    "name": "Instant Pot Chicken Breast",
+    "description": "Non-Tyson chicken with cajun seasoning, made in Instant Pot",
+    "thumbnail": "./assets/images/instant-pot-chicken-breast.jpg"
+  },
+
+  {
+    "id": 5,
+    "name": "Instant Pot Rotisserie Chicken",
+    "description": "Easy, healthy, way better then store bought",
+    "category": "Protein",
+    "isLowCarb": true,
+    "link": "http://cbi.as/a1gz2",
+    "thumbnail": "./assets/images/instant-pot-rotisserie-chicken.jpg"
+  },
+
+  {
+    "id": 6,
+    "name": "Instant Pot Chili",
+    "description": "Chili you can cook in under an hour!",
+    "category": "Meal",
+    "isLowCarb": false,
+    "link": "https://goo.gl/3Xfb7j",
+    "thumbnail": "./assets/images/instant-pot-chili.jpg"
+  },
+
+  {
+    "id": 7,
+    "name": "Instant Pot Pot Roast",
+    "description": "Pot Roast you can cook in under an hour!",
+    "category": "Meal",
+    "isLowCarb": false,
+    "link": "https://goo.gl/v4J9vu",
+    "thumbnail": "./assets/images/instant-pot-pot-roast.jpg"
+  },
+
+  {
+    "id": 8,
+    "name": "Green Chili Chicken Lasagna",
+    "description": "Mexican meets Italian, soo good!",
+    "category": "Meal",
+    "isLowCarb": false,
+    "link": "https://goo.gl/35hPDD",
+    "thumbnail": "./assets/images/green-chili-chicken-lasagna.jpg"
   }
+
 ]

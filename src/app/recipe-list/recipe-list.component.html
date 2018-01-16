@@ -1,7 +1,32 @@
 <h1>Recipes</h1>
+<div>
+  <span>{{filterProp |json}}</span> | <span>{{filterDirection | json}}</span>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <label>
+      <input type="radio" name="term" [(ngModel)]="filterProp" [value]="'name'" (change)="sort()"> name
+    </label>
+    <label>
+      <input type="radio" name="term" [(ngModel)]="filterProp" [value]="'category'" (change)="sort()"> category
+    </label>
+    <select name="role" (change)="sort()" [(ngModel)]="filterDirection">
+      <option [value]="'asc'">
+        Asc
+      </option>
+      <option [value]="'desc'">
+        Desc
+      </option>
+    </select>
+  </div>
+  <div class="col-md-6">
+    <input type="text" [(ngModel)]="searchTerm">
+    <button (click)="searchMenu()" class="btn btn-primary">Search</button>
+  </div>
+</div>
 
 <div class="row">
-  <div class="col" *ngFor="let item of recipeItems">
+  <div class="col-md-3" *ngFor="let item of recipeItems">
 
     <div class="card">
       <img class="card-img-top" src="{{item.thumbnail}}" alt="Card image cap">
